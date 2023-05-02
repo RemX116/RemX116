@@ -65,6 +65,12 @@ header {
     flex-basis: 295px;
 }
 
+.lg {
+	width: 240px;	
+	height: 50px;	
+	border-radius: 15px;
+}
+
 .phone {
     font-weight: 500;
     font-size: 20px;
@@ -72,8 +78,27 @@ header {
     margin-right: auto;
 }
 
+.phone:hover {
+    color: #c93;
+    transition: 0.2s;
+}
+.phone:focus {
+    color: #CC9933;
+    transition: 0.2s;
+}
+.phone:active {
+    color: #A47312;
+    transition: 0.2s;
+}
+
+
+
 .arrow {
     margin-left: 542px;
+}
+
+.burger-menu {
+
 }
 
 .cab {
@@ -87,6 +112,104 @@ header {
     line-height: 16px;
     margin-left: 7px;
 }
+
+.burger-menu {
+    color: #CC9933;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    margin-left: 7px;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 1380px){
+    .burger-menu{
+
+    }
+}
+
+.menu-btn{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+ 
+.menu-btn > span,
+.menu-btn > span::before,
+.menu-btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #CC9933;;
+  transition-duration: .25s;
+}
+.menu-btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu-btn > span::after {
+  content: '';
+  top: 8px;
+}
+ 
+.menubox{
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+  width: 200px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color: #ECEFF1;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+  transition-duration: .25s;
+}
+ 
+.menu-item {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition-duration: .25s;
+}
+.menu-item:hover {
+  background-color: #CFD8DC;
+}
+ 
+ 
+#menu-toggle{
+  opacity: 0;
+}
+ 
+#menu-toggle:checked ~ .menu-btn > span{
+  transform: rotate(45deg);
+}
+#menu-toggle:checked ~ .menu-btn > span::before{
+  top: 0;
+  transform: rotate(0);
+}
+#menu-toggle:checked ~ .menu-btn > span::after{
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu-toggle:checked ~ .menubox{
+  visibility: visible;
+  left: 0;
+}
+
 
 .nav {
     display: flex;
@@ -105,31 +228,31 @@ header {
     margin-right: auto;
 }
 
-.header1 {
+.header {
     margin: 0;
     margin-right: 45px;
     min-width: 39px;
 }
 
-.header2 {
+.header {
     margin: 0;
     margin-right: 45px;
     min-width: 39px;
 } 
 
-.header3 {
+.header {
     margin: 0;
     margin-right: 45px;
     min-width: 39px;
 }
 
-.header4 {
+.header {
     margin: 0;
     margin-right: 45px;
     min-width: 39px;
 }
 
-.header5 {
+.header {
     margin: 0;
     margin-right: 45px;
     min-width: 39px;
@@ -137,6 +260,22 @@ header {
 
 .header6 {
     margin-right: 0;
+}
+.header:hover {
+    color: #CC9933;
+    transition: 0.2s;
+}
+.header6:hover {
+    color: #CC9933;
+    transition: 0.2s;
+}
+.header a:focus {
+    color: #c93;
+    outline: #c93;
+}
+.header6 a:focus {
+    color: #c93;
+    outline: #c93;
 }
 
 .button1 {
@@ -151,9 +290,40 @@ header {
     min-width: 107px;
 }
 
+.button1:hover {
+    background-color: #CC9933;
+    color: white;
+    transition: 0.2s;
+}
+.button1:focus {
+    background-color: #CC9933;
+    color: white;
+    transition: 0.2s;
+    outline: #c93;
+}
+.button1:active {
+    background-color: #A47312;
+}
+.button5:hover {
+    background-color: #CC9933;
+    color: white;
+    transition: 0.2s;
+}
+.button5:focus {
+    background-color: #CC9933;
+    color: white;
+    transition: 0.2s;
+    outline: #c93;
+}
+.button5:active {
+    background-color: #A47312;
+}
+
+}
+
 .button2 {
     font-size: 16px;
-    line-height: 100%;
+    line-height: 100%;  
     color: #CC9933;
     background-color: #ffffff;
     border: 1px solid #CC9933;
@@ -161,6 +331,19 @@ header {
     padding: 13px 20px;
     margin-right: 45px;
     margin-right: 0;
+}
+.button2:hover {
+    background-color: #CC9933;
+    color: white;
+    transition: 0.2s;
+}
+.button2:focus {
+    background-color: #CC9933;
+    color: white;
+    transition: 0.2s;
+}
+.button2:active {
+    background-color: #A47312;
 }
 
 .special {
@@ -236,6 +419,12 @@ header {
     min-height: 16px;
     padding-right: 441px;
     min-width: 100px;
+}
+.desc:active {
+    color: white;
+}
+.desc3:active {
+    color: white;
 }
 
 .flex2 {
@@ -391,6 +580,18 @@ header {
     color: #c93;
     font-weight: 500;
     line-height: 40px;
+}
+.titles:hover {
+    color: #F0BF5F;
+    transition: 0.2s;
+}
+.titles:focus {
+    color: #CC9933;
+    transition: 0.2s;
+}
+.titles:active {
+    color: #A47312;
+    transition: 0.2s;
 }
 
 .descs {
@@ -1026,6 +1227,40 @@ input[type='toorist']{
     word-break: break-all;    
 }
 
+.btn:hover {
+    background-color: #CC9933;
+    transition: 0.2s;
+    color: white;
+}
+.btn:focus {
+    background-color: #CC9933;
+    transition: 0.2s;
+    color: white;
+    outline: #c93;
+}
+.btn:active {
+    background-color: #A47312;
+    color: white;
+}
+
+
+.lastbtn:hover {
+    background-color: #CC9933;
+    transition: 0.2s;
+    color: white;
+}
+.lastbtn:focus {
+    background-color: #CC9933;
+    transition: 0.2s;
+    color: white;
+    outline: #c93;
+}
+.lastbtn:active {
+    background-color: #A47312;
+    color: white;
+}
+
+
 .contact-info {
     min-height:528px;
     width: 1080px;
@@ -1093,16 +1328,63 @@ input[type='toorist']{
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    width: 143px;
+    width: 118px;
     min-height: 24px;
 }
+
+.nam:hover {
+    color: #f0bf5f;
+}
+.nam:focus {
+    color: #CC9933;
+    outline: 1px solid #c93;
+}
+.nam:active {
+    color: #A47312;
+}
+
 
 .mail {
     color: #CC9933;  
     font-size: 16px; 
-    width: 120px;
+    width: 118px;
     min-height: 24px;
 }
+
+.mail:hover {
+    color: #f0bf5f;
+}
+.mail:focus {
+    color: #CC9933;
+    outline: 1px solid #c93;
+}
+.mail:active {
+    color: #A47312;
+}
+
+.footmail:hover {
+    color: #f0bf5f;
+}
+.footmail:focus {
+    color: #CC9933;
+    outline: 1px solid #c93;
+}
+.footmail:active {
+    color: #A47312;
+}
+.footmail2:hover {
+    color: #f0bf5f;
+}
+.footmail2:focus {
+    color: #CC9933;
+    outline: 1px solid #c93;
+}
+.footmail2:active {
+    color: #A47312;
+}
+
+
+
 
 .dis {
     color:#999999;
@@ -1178,7 +1460,6 @@ input[type='toorist']{
     background-repeat: no-repeat;
     background-position: bottom right 176px;
     margin-bottom: 30px;
-
 }
 
 .footercont {
@@ -1237,22 +1518,22 @@ input[type='toorist']{
 }
 
 .footnumber {
-    width: 143px;
+    width: 118px;
     min-height: 24px;
 }
 .footnumber2 {
-    padding-bottom: 15px;
-    width: 143px;
+    margin-bottom: 15px;
+    width: 118px;
     min-height: 24px;
 }
 
 .footmail {
-    width: 128px;
+    width: 110px;
     min-height: 24px;
 }
 
 .footmail2 {
-    width: 128px;
+    width: 117px;
     min-height: 24px;
 }
 
@@ -1260,11 +1541,63 @@ input[type='toorist']{
     padding-left: 269px;
 }
 
+
+.footnumber:hover {
+    color: #f0bf5f;
+}
+.footnumber:focus {
+    color: #CC9933;
+    outline: 1px solid #c93;
+}
+.footnumber:active {
+    color: #A47312;
+}
+.footnumber2:hover {
+    color: #f0bf5f;
+}
+.footnumber2:focus {
+    color: #CC9933;
+    outline: 1px solid #c93;
+}
+.footnumber2:active {
+    color: #A47312;
+}
+
+
 .s1 {
-    padding-bottom: 20px;
+    margin-bottom: 20px;
+    display: block;
+}
+.s1 svg {
+    fill: #999999;
+    transition: 0.2s;
 }
 
 
-.s2 {
-    padding-bottom: 20px;
+.s1:hover svg {
+    fill:#CC9933;
 }
+.s1:focus svg {
+    fill:#CC9933;
+    transition: .2s;
+}
+
+.s1:active svg {
+    fill: #A47312;
+}
+
+.s1:hover path {
+    fill:#CC9933;
+    transition: .2s;
+}
+.s1:focus path {
+    fill:#CC9933;
+    transition: .2s;
+}
+.s1:active path {
+    fill: #A47312;
+    transition: .2s;
+}
+
+
+
