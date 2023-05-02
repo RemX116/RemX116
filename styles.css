@@ -62,7 +62,8 @@ header {
 
 .logotype {
     height: auto;
-    flex-basis: 295px;
+    flex-basis: 240px;
+    margin-right: 55px;
 }
 
 .lg {
@@ -71,11 +72,19 @@ header {
 	border-radius: 15px;
 }
 
+.logotype:focus {
+    outline: 1px solid #CC9933;
+}
+
 .phone {
     font-weight: 500;
     font-size: 20px;
     line-height: 20px;
     margin-right: auto;
+}
+
+.phone:focus {
+    outline: 1px solid #CC9933;
 }
 
 .phone:hover {
@@ -413,12 +422,18 @@ header {
 }
 
 .desc {
-    padding-top: 47px;
+    margin-top: 47px;
     color: #f0bf5f;
     display: block;
     min-height: 16px;
-    padding-right: 441px;
+    margin-right: 441px;
     min-width: 100px;
+}
+.desc:focus {
+    outline: 1px solid #CC9933;
+}
+.desc3:focus {
+    outline: 1px solid #CC9933;
 }
 .desc:active {
     color: white;
@@ -469,8 +484,10 @@ header {
 
 .desc3 {
     display: block;
-    padding-top: 47px;
+    margin-top: 47px;
     color: #f0bf5f;
+    width: 100px;
+    min-height: 16px;
 }
 
 .aboutus {
@@ -592,6 +609,10 @@ header {
 .titles:active {
     color: #A47312;
     transition: 0.2s;
+}
+
+.tit:focus {
+    outline: 1px solid #c93;
 }
 
 .descs {
